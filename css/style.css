@@ -30,6 +30,7 @@ body {
 .ground {
   position: relative;
   height: 200px;
+  overflow: hidden;
 }
 .ground .grass {
   height: 250px;
@@ -44,10 +45,10 @@ body {
 }
 .ground .car {
   position: absolute;
-  left: 70px;
   bottom: 70px;
   height: 130px;
   width: 300px;
+  animation: moving-car 5s linear infinite;
 }
 .ground .car .top {
   position: absolute;
@@ -93,4 +94,37 @@ body {
 }
 .ground .car .bottom .front-tyre {
   right: 10px;
+}
+
+@keyframes moving-car {
+  0% {
+    transform: translateX(-20vw);
+  }
+  1% {
+    transform: translateX(0vw);
+  }
+  10% {
+    transform: translateX(15vw);
+  }
+  20% {
+    transform: translateX(35vw);
+  }
+  30% {
+    transform: translateX(45vw);
+  }
+  40% {
+    transform: translateX(55vw);
+  }
+  50% {
+    transform: translateX(65vw);
+  }
+  60% {
+    transform: translateX(75vw);
+  }
+  70% {
+    transform: translateX(85vw);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
 }/*# sourceMappingURL=style.css.map */
