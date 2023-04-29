@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #333;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+.sky {
+  position: relative;
+  height: 400px;
+  background-color: royalblue;
+}
+.sky .sun {
+  position: absolute;
+  left: 100px;
+  top: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: #e1f013;
+  border-radius: 50%;
+  box-shadow: 0 0 50px #e1f013;
+}
+
+.ground {
+  position: relative;
+  height: 200px;
+}
+.ground .grass {
+  height: 250px;
+  background-color: rgb(42, 238, 42);
+}
+.ground .road {
+  position: absolute;
+  bottom: 30px;
+  height: 120px;
+  width: 100%;
+  background-color: #fff;
+}
+.ground .car {
+  position: absolute;
+  left: 70px;
+  bottom: 120px;
+  height: 60px;
+  width: 200px;
+  background-color: red;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  overflow: hidden;
+}
+.ground .car .window {
+  position: absolute;
+  top: 10px;
+  width: 65px;
+  height: 100%;
+  background-color: blue;
+}
+.ground .car .front-window {
+  right: 0;
+}
+.ground .bottom {
+  position: absolute;
+  left: 50px;
+  bottom: 70px;
+  width: 250px;
+  height: 50px;
+  background-color: red;
+  border-top-right-radius: 25px;
+}
+.ground .bottom .tyre {
+  position: absolute;
+  top: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border: dotted 4px silver;
+  border-radius: 50%;
+}
+.ground .bottom .back-tyre {
+  left: 10px;
+}
+.ground .bottom .front-tyre {
+  right: 10px;
+}/*# sourceMappingURL=style.css.map */
