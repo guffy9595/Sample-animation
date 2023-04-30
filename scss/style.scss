@@ -50,7 +50,7 @@ body {
 		bottom: 70px;
 		height: 130px;
 		width: 300px;
-		animation: moving-car 5s linear infinite;
+		animation: moving-car 8s ease infinite;
 		// animation: name duration timing-function delay iteration-count direction fill-mode;
 
 		.top {
@@ -97,50 +97,30 @@ body {
 
 			.back-tyre {
 				left: 10px;
+				animation: rotate-tyre 5s linear infinite;
 			}
 			.front-tyre {
 				right: 10px;
+				animation: rotate-tyre 5s linear infinite;
 			}
 		}
 	}
 }
 
 @keyframes moving-car {
-	0% {
+	from {
 		transform: translateX(-20vw);
 	}
-	1% {
-		transform: translateX(-0vw);
+	to {
+		transform: translateX(130vw);
 	}
-	10% {
-		transform: translateX(15vw);
-	}
-	20% {
-		transform: translateX(35vw);
-	}
-	30% {
-		transform: translateX(45vw);
-	}
-	40% {
-		transform: translateX(55vw);
-	}
-	50% {
-		transform: translateX(65vw);
-	}
-	60% {
-		transform: translateX(75vw);
-	}
-	70% {
-		transform: translateX(85vw);
-	}
-	100% {
-		transform: translateX(100vw);
-	}
-	// 90% {
-	// 	transform: translateX(-30vw);
-	// }
-	// 100% {
-	// 	transform: translateX(-10vw);
+}
 
-	// }
+@keyframes rotate-tyre {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+	}
 }
