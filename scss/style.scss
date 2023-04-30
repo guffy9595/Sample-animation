@@ -15,6 +15,7 @@ body {
 	position: relative;
 	height: 400px;
 	background-color: royalblue;
+	animation: night-sky 8s ease-in-out infinite;
 
 	.sun {
 		position: absolute;
@@ -25,6 +26,7 @@ body {
 		background-color: #e1f013;
 		border-radius: 50%;
 		box-shadow: 0 0 50px #e1f013;
+		animation: moon-appears 8s ease-in-out infinite, sun-moving 4s ease-in-out infinite;
 	}
 }
 
@@ -50,8 +52,7 @@ body {
 		bottom: 70px;
 		height: 130px;
 		width: 300px;
-		animation: moving-car 8s ease infinite;
-		// animation: name duration timing-function delay iteration-count direction fill-mode;
+		animation: moving-car 6s linear infinite;
 
 		.top {
 			position: absolute;
@@ -109,10 +110,10 @@ body {
 
 @keyframes moving-car {
 	from {
-		transform: translateX(-20vw);
+		transform: translateX(-15vw);
 	}
 	to {
-		transform: translateX(130vw);
+		transform: translateX(120vw);
 	}
 }
 
@@ -121,6 +122,43 @@ body {
 		transform: rotate(0deg);
 	}
 	to {
-		transform: rotate(360deg)
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes night-sky {
+	0% {
+		background-color: royalblue;
+	}
+	50% {
+		background-color: rgb(3, 14, 44);
+	}
+	100% {
+		background-color: royalblue;
+	}
+}
+
+@keyframes moon-appears {
+	0% {
+		background-color: #e1f013;
+		box-shadow: 0 0 50px #e1f013;
+	}
+	50% {
+		background-color: #c4beb7;
+		box-shadow: 0 0 50px #c4beb7;
+	}
+	100% {
+		background-color: #e1f013;
+	}
+}
+@keyframes sun-moving {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(400px);
+	}
+	100% {
+		transform: translate(0);
 	}
 }
